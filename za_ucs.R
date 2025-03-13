@@ -16,7 +16,12 @@ rm(list = ls())
 za <- vect("E:/_PESSOAL/Delano/za/vetores/za_ze_planos_uc_sp_conic.shp")
 uc <- vect("E:/_PESSOAL/Delano/za/vetores/SIGAM_uc_sp.gpkg")
 
-za[,"Nome"]
-unique(values(uc)[,"Unidade"])
-unique(values(za)[,"Nome"])
+gsub("�", "", values(uc)[,"Unidade"])
+
+gsub("")
+
+values(za)[,"Nome"]
+
+stri_trans_general(unique(values(uc)[,"Unidade"]), "Latin-ASCII")
+
 
